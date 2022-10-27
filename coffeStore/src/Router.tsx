@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { DefaultLayout } from './layout/DefaultLayout'
 import { Checkout } from './pages/Checkout'
-import { Home } from './pages/components/Home/Home'
+import { Home } from './pages/components/Home'
 
 export function Router() {
   return (

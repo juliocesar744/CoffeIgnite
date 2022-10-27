@@ -1,6 +1,7 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import Coffe from '../../../assets/Coffe.svg'
-import { BaseText, DivIcons, HomeContainer, SubText, Text } from './styles'
+import { Coffes } from '../Coffes'
+import { BaseText, CoffesContainer, DivIcons, HomeContainer, SubText, Text, TextCoffe } from './styles'
 
 export function Home() {
     return (
@@ -36,9 +37,11 @@ export function Home() {
                     <img src={Coffe} alt="" />
                 </div>
             </HomeContainer>
-            <HomeContainer>
-                Nossos cafés
-            </HomeContainer>
+            <TextCoffe>Nossos cafés</TextCoffe>
+
+            <CoffesContainer>
+                <Coffes></Coffes>
+            </CoffesContainer>
         </>
     )
 }

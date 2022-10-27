@@ -30,3 +30,17 @@ export const DivIcons = styled.div`
   gap: 5rem;
   padding-top: 1rem;
 `
+
+export const CoffesContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 10rem;
+  gap: 1rem;
+`
+
+export const TextCoffe = styled.div`
+  font-family: 'Baloo 2';
+  font-size: 2rem;
+  padding: 0 10rem;
+`
