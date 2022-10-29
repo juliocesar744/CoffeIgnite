@@ -33,10 +33,10 @@ export const DivIcons = styled.div`
 
 export const CoffesContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap:wrap;
+  justify-content:flex-start;
   padding: 2rem 10rem;
-  gap: 1rem;
+  gap: 2rem;
 `
 
 export const TextCoffe = styled.div`
