@@ -6,7 +6,7 @@ let coffeExamples = [
     {
         img: ExpressoAmericano,
         qtd: 0,
-        name: "Expresso Americano",
+        name: "Expresso Americano2",
         tags: ["Com leite", "Alternativo"],
         desc: "Expresso diluído, menos intenso que o tradiocional",
         price: 9.90
