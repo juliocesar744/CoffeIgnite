@@ -1,5 +1,5 @@
-import { Bank, CreditCard, CurrencyDollar, MapPin, Money, Trash } from "phosphor-react";
-import { AddressContainer, ButtonStyle, CoffeSelectedContainer, PaymentContainer, Request, RequestContainer } from "./styles";
+import { Bank, CreditCard, CurrencyDollar, MapPin, MapPinLine, Money, Trash } from "phosphor-react";
+import { AddressContainer, ButtonStyle, CoffeSelectedContainer, FormContainer, Line, PaymentContainer, Request, RequestContainer } from "./styles";
 import  ExpressoAmericano  from '../../assets/Coffes/ExpressoAmericano.svg'
 
 let coffeExamples = [
@@ -27,38 +27,60 @@ export function Checkout() {
             <Request>Complete seu pedido</Request>
 
             <AddressContainer>
-                <MapPin/>
-                <span>Endereço de Entrega</span>
-                <p>Informe o endereço onde deseja receber seu pedido</p>
+                <div className="title">
+                    <MapPinLine size={24} color={"#C47F17"}/>
+                    <div className="text">
+                        <span>Endereço de Entrega</span>
+                        <p>Informe o endereço onde deseja receber seu pedido</p>
+                    </div>
+                </div>
+                
 
-                <form>
-                    <input  type="text" id="cep" name="cep" value="CEP" />
-                    <input type="text" id="rua" name="rua" value="Rua" />
-                    <input type="text" id="numero" name="numero" value="Número" />
-                    <input type="text" id="complemento" name="complemento" value="Complemento" />
-                    <input type="text" id="bairro" name="bairro" value="Bairro" />
-                    <input type="text" id="cidade" name="cidade" value="Cidade" />
-                    <input type="text" id="uf" name="uf" value="UF" />
-                </form>
+                <FormContainer>
+                    <div>
+                        <input  type="text" id="cep" className="cep" placeholder="CEP" />
+                    </div>
+                    <div>
+                        <input type="text" id="rua" className="rua" placeholder="Rua" />
+                    </div>
+                    <div>
+                        <input type="text" id="numero" className="numero" placeholder="Número" />
+                        <input type="text" id="complemento" className="complemento" placeholder="Complemento" />
+                    </div>
+                    <div>
+                        <input type="text" id="bairro" className="bairro" placeholder="Bairro" />
+                        <input type="text" id="cidade" className="cidade" placeholder="Cidade" />
+                        <input type="text" id="uf" className="uf" placeholder="UF" />
+                    </div>
+                </FormContainer>
 
             </AddressContainer>
 
             <Request> Cafés Selecionados</Request>
             <CoffeSelectedContainer>
-                
                     {coffeExamples.map(coffe => {
                         return (
-                            <div key={coffe.qtd}>
-                                <img src={ExpressoAmericano}  />
-                                {coffe.name}
-                                R${coffe.price * coffe.qtd}
-                                <ButtonStyle>-</ButtonStyle>  
-                                    <span>{coffe.qtd}</span> 
-                                <ButtonStyle>+</ButtonStyle>
-                                <button>
-                                    <Trash/>
-                                    Remover
-                                </button>
+                            <div className="coffe" key={coffe.qtd}>
+                                <div>
+                                    <img src={ExpressoAmericano}  />
+                                </div>
+                                <div className="space">
+                                    <div>
+                                        <span>{coffe.name}</span>
+                                        <span className="value">R${coffe.price * coffe.qtd}</span> 
+                                    </div>
+                                    <div>
+                                        <ButtonStyle>-</ButtonStyle>  
+                                            <span>{coffe.qtd}</span> 
+                                        <ButtonStyle>+</ButtonStyle>
+                                        <button>
+                                            <Trash/>
+                                            Remover
+                                        </button>
+                                    </div>
+                                </div>
+                               
+                                <Line />
                             </div>
                         )
                     })}
