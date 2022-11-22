@@ -103,10 +103,11 @@ export const ButtonStyle = styled.button`
     border: none;
     outline: none;
     background: none;
-
+    border-radius: 0.5rem;
     &:focus {
         border: none;
         outline: none;
+    border-radius: 0.5rem;
     }
 `
 
@@ -155,4 +156,25 @@ export const FormContainer = styled.form`
 export const Line = styled.div`
     height: 0.1rem;
     background: ${(props) => props.theme['gray-500']};
+`
+
+export const PriceContainer = styled.div`
+    position: relative;
+    font-size: 1.25rem;
+    white-space: nowrap; 
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    div {
+        background: ${(props) => props.theme['gray-500']};
+        border-radius: 0.5rem;
+    }
+
+    button{
+        border: none;
+        outline: none;
+        background: ${(props) => props.theme['gray-500']};
+        cursor: pointer;
+    }
 `

@@ -1,5 +1,5 @@
 import { Bank, CreditCard, CurrencyDollar, MapPin, MapPinLine, Money, Trash } from "phosphor-react";
-import { AddressContainer, ButtonStyle, CoffeSelectedContainer, FormContainer, Line, PaymentContainer, Request, RequestContainer } from "./styles";
+import { AddressContainer, ButtonStyle, CoffeSelectedContainer, FormContainer, Line, PaymentContainer, PriceContainer, Request, RequestContainer } from "./styles";
 import  ExpressoAmericano  from '../../assets/Coffes/ExpressoAmericano.svg'
 
 let coffeExamples = [
@@ -69,15 +69,19 @@ export function Checkout() {
                                         <span>{coffe.name}</span>
                                         <span className="value">R${coffe.price * coffe.qtd}</span> 
                                     </div>
-                                    <div>
-                                        <ButtonStyle>-</ButtonStyle>  
-                                            <span>{coffe.qtd}</span> 
-                                        <ButtonStyle>+</ButtonStyle>
-                                        <button>
-                                            <Trash/>
-                                            Remover
-                                        </button>
-                                    </div>
+                                    <PriceContainer>
+                                        <div>
+                                            <ButtonStyle>-</ButtonStyle>  
+                                                <span>{coffe.qtd}</span> 
+                                            <ButtonStyle>+</ButtonStyle>
+                                        </div>
+                                        <div>
+                                            <ButtonStyle>
+                                                <Trash/>
+                                                Remover
+                                            </ButtonStyle>
+                                        </div>
+                                    </PriceContainer>
                                 </div>
                                
                                 <Line />
